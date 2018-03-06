@@ -12,7 +12,7 @@ npm install vue-language-server -g
 yarn global add vue-language-server
 ```
 
-Install [`lsp-mode`](https://github.com/emacs-lsp/lsp-mode) first, and either clone
+Install [`lsp-mode`](https://github.com/emacs-lsp/lsp-mode) and [`lsp-ui`](https://github.com/emacs-lsp/lsp-ui) first, and either clone
 this repository. Add the following to your emacs configuration:
 
 ``` emacs-lisp

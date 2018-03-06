@@ -40,6 +40,7 @@
 ;;; Code:
 
 (require 'lsp-mode)
+(require 'lsp-ui)
 
 (defgroup lsp-vue
   nil
@@ -241,10 +242,10 @@
   "Enable lsp-vue for all major-modes supported by ‘vue-mode’."
   (interactive)
   (lsp-vue-enable)
-  (when (and lsp-enable-flycheck (featurep 'lsp-flycheck) (featurep 'vue-mode))
+  (when (and lsp-ui-flycheck-enable (featurep 'lsp-ui-flycheck) (featurep 'vue-mode))
     (require 'vue-mode)
     (dolist (mode-settings vue-modes)
-      (lsp-flycheck-add-mode (plist-get mode-settings ':mode)))))
+      (lsp-ui-flycheck-add-mode (plist-get mode-settings ':mode)))))
 
 (provide 'lsp-vue)
 ;;; lsp-vue.el ends here
